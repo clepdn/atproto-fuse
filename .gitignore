@@ -1,3 +1,5 @@
 pds/data/*
 .env
 *.env
+password/*
+node_modules
