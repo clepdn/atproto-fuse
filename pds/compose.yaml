@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  pds:
+    container_name: pds
+    image: ghcr.io/bluesky-social/pds:0.4
+    ports: 
+      - "3000:3000"
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ./data
+        target: /pds
+    env_file:
+      - ./data/pds.env
